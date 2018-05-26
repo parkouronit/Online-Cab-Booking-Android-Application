@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.parkouronitgmail.rovers.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+    <include layout="@layout/activity_maps"/>
+    <RelativeLayout
+        android:id="@+id/loc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <EditText
+            android:drawableStart="@drawable/source"
+            android:id="@+id/src"
+            android:hint="Pick up source"
+            android:paddingLeft="20dp"
+            android:textColor="#000"
+            android:textColorHint="#000"
+            android:background="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+        <EditText
+            android:drawableStart="@drawable/destination"
+            android:paddingLeft="20dp"
+            android:textColor="#000"
+            android:textColorHint="#000"
+            android:hint="Dropping destination"
+            android:layout_below="@id/src"
+            android:id="@+id/dst"
+            android:background="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <Button
+            android:id="@+id/book"
+            android:textColor="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/btshape"
+            android:text="@string/book_cab" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+     android:id="@+id/booklayout"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:background="#faf2f2"
+     android:elevation="4dp"
+     android:padding="10dp">
+        <LinearLayout
+         android:id="@+id/detail"
+         android:background="@color/colorPrimary"
+         android:orientation="horizontal"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+         <ImageButton
+             android:background="@color/colorPrimary"
+             android:paddingRight="10dp"
+             android:paddingLeft="10dp"
+             android:id="@+id/hid"
+             android:src="@drawable/ic_arrow_back_black_24dp"
+             android:layout_width="wrap_content"
+             android:layout_height="50dp" />
+         <TextView
+             android:textSize="30dp"
+             android:textColor="#fff"
+             android:textAlignment="center"
+             android:gravity="center_vertical"
+             android:text="Booking Details"
+             android:layout_width="match_parent"
+             android:layout_height="50dp" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+         android:id="@+id/choice"
+         android:layout_marginTop="20dp"
+         android:layout_below="@+id/detail"
+         android:background="#fff"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+         <TextView
+             android:paddingLeft="20dp"
+             android:text="Trip Type"
+             android:textSize="20sp"
+             android:textColor="#000"
+             android:textColorHint="#000"
+             android:id="@+id/text"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" />
+
+         <RelativeLayout
+             android:layout_marginTop="5dp"
+             android:background="#fff"
+             android:id="@+id/leavesel"
+             android:layout_below="@+id/text"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+             <EditText
+                 android:hint="Leave on Date"
+                 android:layout_width="200dp"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/in_date"
+                 android:layout_alignParentTop="true"
+                 android:layout_alignParentLeft="true"
+                 android:layout_alignParentStart="true" />
+             <Button
+                 android:textColor="#fff"
+                 android:background="@drawable/btshape"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="SELECT DATE"
+                 android:textSize="10dp"
+                 android:id="@+id/btn_date"
+                 android:layout_alignBottom="@+id/in_date"
+                 android:layout_toRightOf="@+id/in_date"
+                 android:layout_toEndOf="@+id/in_date" />
+             <EditText
+                 android:hint="Leave on time"
+                 android:layout_width="200dp"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/in_time"
+                 android:layout_below="@+id/in_date"
+                 android:layout_alignParentLeft="true"
+                 android:layout_alignParentStart="true" />
+             <Button
+                 android:textColor="#fff"
+                 android:background="@drawable/btshape"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="SELECT TIME"
+                 android:textSize="10dp"
+                 android:id="@+id/btn_time"
+                 android:layout_below="@+id/btn_date"
+                 android:layout_alignLeft="@+id/btn_date"
+                 android:layout_alignStart="@+id/btn_date" />
+         </RelativeLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+         android:id="@+id/selll"
+         android:background="#fff"
+         android:layout_marginTop="20dp"
+         android:layout_below="@+id/choice"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+         <TextView
+             android:id="@+id/tvSelcar"
+             android:text="Select car type"
+             android:textSize="20sp"
+             android:gravity="center_vertical"
+             android:textColor="#000"
+             android:layout_centerInParent="true"
+             android:textAlignment="center"
+             android:layout_width="wrap_content"
+             android:layout_height="40dp" />
+         <Spinner
+             android:layout_toEndOf="@+id/tvSelcar"
+             android:id="@+id/sCarSelect"
+             android:layout_width="wrap_content"
+             android:layout_height="40dp"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:gravity="bottom"
+            android:layout_below="@+id/selll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:textColor="#fff"
+                android:text="Confirm Booking"
+                android:background="@drawable/btshape"
+                android:id="@+id/C_book"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:id="@+id/driver_details"
+        android:layout_alignParentBottom="true"
+        android:background="#a3a3a3">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#ffffff"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/linearLayout1">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="113dp"
+                android:layout_height="match_parent"
+                android:id="@+id/ll_call"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/phone"
+                    android:id="@+id/imageView2"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:text="CALL DRIVER"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView4"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="146dp"
+                android:layout_height="match_parent"
+                android:id="@+id/ll_share"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/share"
+                    android:id="@+id/imageView3"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:text="SHARE DETAILS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView5"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ll_cancel"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/cancelride"
+                    android:id="@+id/imageView4"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:text="CANCEL RIDE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView6"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="#ffffff"
+            android:id="@+id/linearLayout2"
+            android:layout_above="@id/linearLayout1"
+            android:layout_marginBottom="1dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="160dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:text="Status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/b_status"
+                    android:textSize="25dp"
+                    android:textColor="#000000"
+                    android:textAlignment="textStart" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:text="Amandeep Singh"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/driver_name"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textSize="16dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:fitsSystemWindows="true"
+    android:padding="30dp"
+    android:background="@color/colorAccent"
+    tools:context="com.parkouronitgmail.rovers.Register">
+    <RelativeLayout
+        android:id="@+id/layLog"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Register"
+            android:textSize="50sp"
+            android:textColor="#fff"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:paddingTop="30dp"
+        android:gravity="center_horizontal"
+        android:id="@+id/layDetail"
+        android:layout_below="@id/layLog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:hint="Username"
+            android:id="@+id/etUsername"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:textAlignment="center"
+            android:background="@drawable/et_shape"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+        <EditText
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/etUsername"
+            android:hint="Contact"
+            android:singleLine="true"
+            android:id="@+id/etContact"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:background="@drawable/et_shape"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+        <EditText
+            android:singleLine="true"
+            android:layout_marginTop="10dp"
+            android:hint="Email"
+            android:id="@+id/etEmail"
+            android:layout_below="@+id/etContact"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:textAlignment="center"
+            android:background="@drawable/et_shape"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+        <EditText
+            android:singleLine="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/etEmail"
+            android:hint="Password"
+            android:id="@+id/etPassword"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:background="@drawable/et_shape"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+        <Button
+            android:id="@+id/btRegister"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/etPassword"
+            android:background="@drawable/btshape"
+            android:text="Register"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>

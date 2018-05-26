@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Rovers</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_main">Rovers</string>
+    <string name="title_book_main">Booking Details</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="book_cab">Book Cab</string>
+    <string name="confirm_booking">Confirm Booking</string>
+</resources>

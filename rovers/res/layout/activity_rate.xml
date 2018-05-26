@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:padding="20dp"
+    tools:context="com.parkouronitgmail.rovers.RateActivity">
+    <android.support.v7.widget.CardView
+        app:cardElevation="10dp"
+        app:cardCornerRadius="20dp"
+        app:cardMaxElevation="10dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardBackgroundColor="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:padding="20dp"
+                android:id="@+id/dName"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:layout_below="@+id/dName"
+                android:id="@+id/star"
+                android:background="@color/colorPrimary"
+                android:padding="20dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RatingBar
+                    android:id="@+id/dRate"
+                    android:numStars="5"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+           <Button
+               android:text="Rate"
+               android:textColor="#fff"
+               android:textSize="20sp"
+               android:id="@+id/btRate"
+               android:background="@drawable/btshape"
+               android:layout_marginTop="20dp"
+               android:layout_below="@id/star"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

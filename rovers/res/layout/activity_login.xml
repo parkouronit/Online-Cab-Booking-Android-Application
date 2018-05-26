@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:fitsSystemWindows="true"
+    android:padding="30dp"
+    android:background="@color/colorAccent"
+    tools:context="com.parkouronitgmail.rovers.Login">
+    <RelativeLayout
+        android:id="@+id/layLog"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+        <ImageView
+            android:layout_centerInParent="true"
+            android:src="@drawable/llogo"
+            android:layout_width="100dp"
+            android:layout_height="200dp" android:contentDescription="TODO"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:gravity="center_horizontal"
+        android:id="@+id/layDetail"
+        android:layout_below="@id/layLog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:hint="Email"
+            android:id="@+id/etEmail"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:textAlignment="center"
+            android:background="@drawable/et_shape"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+        <EditText
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/etEmail"
+            android:hint="Password"
+            android:singleLine="true"
+            android:id="@+id/etPassword"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:background="@drawable/et_shape"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+        <Button
+            android:id="@+id/bt_go"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/etPassword"
+            android:background="@drawable/btshape"
+            android:text="Login"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_below="@+id/bt_go"
+            android:text="not a member yet"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:id="@+id/notmember"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="Create One"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:id="@+id/GoTO"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/notmember"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>
