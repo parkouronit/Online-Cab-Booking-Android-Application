@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.parkouronitgmail.cabbies.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+    <include layout="@layout/activity_maps"/>
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/user"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/user"/>
+    <RelativeLayout
+        android:gravity="end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Switch
+            android:id="@+id/stat"
+            android:background="@color/colorPrimary"
+            android:layout_width="60dp"
+            android:layout_height="40dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:id="@+id/booking_details"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff">
+
+        <Button
+            android:text="Start Ride"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnStartRide"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+
+            android:textColor="#729b01" />
+
+        <Button
+            android:text="End Ride"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnEndRide"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+
+            android:textColor="#729b01" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="48dp"
+            android:weightSum="1"
+            android:id="@+id/ll_book_info">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.30"
+                android:id="@+id/ll_call"
+                android:background="?attr/selectableItemBackground"
+                android:weightSum="100">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:src="@drawable/driverphoneicon"
+                    android:id="@+id/imageView2"
+                    android:layout_gravity="center"
+                    android:layout_weight="50"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:text="Status"
+                    android:id="@+id/bStatus"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:layout_weight="50"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="251dp"
+                android:layout_height="match_parent"
+                android:weightSum="1"
+                android:id="@+id/ll_">
+
+                <TextView
+                    android:text="No Bookings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtcustomer_name"
+                    android:layout_weight="0.69"
+                    android:textStyle="normal|bold"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:text="Please wait for the booking"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:id="@+id/txtpickup_address" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:id="@+id/txtdrop_address" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:fillViewport="true"
+    android:background="@color/colorPrimary"
+    tools:context="com.parkouronitgmail.cabbies.Register">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/mainLayout"
+            android:layout_alignParentTop="true"
+            android:id="@+id/headerLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView1"
+                    android:text="Register"
+                    android:textSize="40sp"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold"
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:id="@+id/mainLayout"
+            android:orientation="vertical">
+
+            <EditText
+                android:background="@drawable/et_shape"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/etUsername"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:hint="Username"
+                android:inputType="textPersonName">
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:background="@drawable/et_shape"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/etEmail"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:hint="Email"
+                android:inputType="textEmailAddress" />
+            <EditText
+                android:background="@drawable/et_shape"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/etContact"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:hint="Contact"
+                android:inputType="phone"/>
+            <EditText
+                android:background="@drawable/et_shape"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/etPassword"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:hint="Password"
+                android:inputType="textPassword" />
+
+                <Spinner
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spinn"
+                    android:id="@+id/sCarSelect"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tvSelcar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+
+            <Button
+                android:background="@drawable/btshape"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:id="@+id/btRegister"
+                android:textSize="30sp"
+                android:textColor="@color/colorPrimary"
+                android:text="Register" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
